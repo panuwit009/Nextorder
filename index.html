@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <title>Responsive Shop</title>
+
+  <style>
+    html, body {
+      font-family: 'Sarabun', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+    <!-- ชื่อร้าน -->
+    <div class="text-xl md:text-2xl font-bold text-gray-800">
+      My Shop
+    </div>
+
+    <!-- เมนูสำหรับ Desktop -->
+    <div class="hidden md:flex space-x-6">
+      <a href="#" class="text-gray-600 hover:text-gray-900">หน้าแรก</a>
+      <a href="#" class="text-gray-600 hover:text-gray-900">สินค้า</a>
+      <a href="#" class="text-gray-600 hover:text-gray-900">โปรโมชั่น</a>
+      <a href="#" class="text-gray-600 hover:text-gray-900">เกี่ยวกับเรา</a>
+      <a href="#" class="text-gray-600 hover:text-gray-900">ติดต่อ</a>
+    </div>
+
+    <!-- ปุ่มเมนู 3 ขีดสำหรับ Mobile -->
+    <button class="md:hidden text-gray-800 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- ช่องค้นหา -->
+  <div class="w-full max-w-md mx-auto px-4 py-6">
+    <div class="flex items-center border border-gray-300 rounded-full px-4 py-2 bg-white shadow-sm">
+      <input
+        type="text"
+        placeholder="ค้นหาสินค้า..."
+        class="flex-grow focus:outline-none text-sm"
+      />
+      <button class="text-gray-500 hover:text-gray-700">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="py-4 text-center">
+    กรุณาเลือกเมนู
+  </div>
+
+  <!-- หมวดหมู่และกริดสินค้า -->
+  <div class="container mx-auto">
+    <div class="px-4 md:px-6 text-xl md:text-2xl font-medium">
+      ชื่อหมวดหมู่
+    </div>
+
+    <!-- กริดสินค้า - เปลี่ยนจาก 2 คอลัมน์ในมือถือเป็น 4 คอลัมน์ในเดสก์ท็อป -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 px-2 md:px-6 py-4">
+      <!-- การ์ด 1 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+        <!-- รูปภาพ -->
+        <img
+          src="https://via.placeholder.com/300x200"
+          alt="ชื่ออาหาร"
+          class="w-full h-20 md:h-40 object-cover p-2"
+        />
+        <!-- เนื้อหาด้านล่าง -->
+        <div class="p-4">
+          <h2 class="text-lg md:text-xl font-semibold text-gray-800">ข้าวผัดกุ้ง</h2>
+          <p class="text-sm md:text-base text-gray-600 mt-1">ราคา: 80 บาท</p>
+          <!-- ปุ่มเพิ่มลงตะกร้า (แสดงในหน้าจอใหญ่) -->
+          <button class="hidden md:block mt-3 bg-blue-500 hover:bg-blue-600 text-white py-1 px-4 rounded-full text-sm">
+            เพิ่มลงตะกร้า
+          </button>
+        </div>
+      </div>
+    
+      <!-- การ์ด 2 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+        <!-- รูปภาพ -->
+        <img
+          src="https://via.placeholder.com/300x200"
+          alt="ชื่ออาหาร"
+          class="w-full h-20 md:h-40 object-cover p-2"
+        />
+        <!-- เนื้อหาด้านล่าง -->
+        <div class="p-4">
+          <h2 class="text-lg md:text-xl font-semibold text-gray-800">ข้าวผัดหมู</h2>
+          <p class="text-sm md:text-base text-gray-600 mt-1">ราคา: 70 บาท</p>
+          <!-- ปุ่มเพิ่มลงตะกร้า (แสดงในหน้าจอใหญ่) -->
+          <button class="hidden md:block mt-3 bg-blue-500 hover:bg-blue-600 text-white py-1 px-4 rounded-full text-sm">
+            เพิ่มลงตะกร้า
+          </button>
+        </div>
+      </div>
+    
+      <!-- การ์ด 3 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+        <!-- รูปภาพ -->
+        <img
+          src="https://via.placeholder.com/300x200"
+          alt="ชื่ออาหาร"
+          class="w-full h-20 md:h-40 object-cover p-2"
+        />
+        <!-- เนื้อหาด้านล่าง -->
+        <div class="p-4">
+          <h2 class="text-lg md:text-xl font-semibold text-gray-800">ข้าวผัดไก่</h2>
+          <p class="text-sm md:text-base text-gray-600 mt-1">ราคา: 70 บาท</p>
+          <!-- ปุ่มเพิ่มลงตะกร้า (แสดงในหน้าจอใหญ่) -->
+          <button class="hidden md:block mt-3 bg-blue-500 hover:bg-blue-600 text-white py-1 px-4 rounded-full text-sm">
+            เพิ่มลงตะกร้า
+          </button>
+        </div>
+      </div>
+    
+      <!-- การ์ด 4 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+        <!-- รูปภาพ -->
+        <img
+          src="https://via.placeholder.com/300x200"
+          alt="ชื่ออาหาร"
+          class="w-full h-20 md:h-40 object-cover p-2"
+        />
+        <!-- เนื้อหาด้านล่าง -->
+        <div class="p-4">
+          <h2 class="text-lg md:text-xl font-semibold text-gray-800">ข้าวผัดปู</h2>
+          <p class="text-sm md:text-base text-gray-600 mt-1">ราคา: 90 บาท</p>
+          <!-- ปุ่มเพิ่มลงตะกร้า (แสดงในหน้าจอใหญ่) -->
+          <button class="hidden md:block mt-3 bg-blue-500 hover:bg-blue-600 text-white py-1 px-4 rounded-full text-sm">
+            เพิ่มลงตะกร้า
+          </button>
+        </div>
+      </div>
+
+      <!-- การ์ด 5 (แสดงในหน้าจอใหญ่) -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+        <img
+          src="https://via.placeholder.com/300x200"
+          alt="ชื่ออาหาร"
+          class="w-full h-20 md:h-40 object-cover p-2"
+        />
+        <div class="p-4">
+          <h2 class="text-lg md:text-xl font-semibold text-gray-800">ต้มยำกุ้ง</h2>
+          <p class="text-sm md:text-base text-gray-600 mt-1">ราคา: 120 บาท</p>
+          <button class="hidden md:block mt-3 bg-blue-500 hover:bg-blue-600 text-white py-1 px-4 rounded-full text-sm">
+            เพิ่มลงตะกร้า
+          </button>
+        </div>
+      </div>
+
+      <!-- การ์ด 6 (แสดงในหน้าจอใหญ่) -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+        <img
+          src="https://via.placeholder.com/300x200"
+          alt="ชื่ออาหาร"
+          class="w-full h-20 md:h-40 object-cover p-2"
+        />
+        <div class="p-4">
+          <h2 class="text-lg md:text-xl font-semibold text-gray-800">แกงเขียวหวาน</h2>
+          <p class="text-sm md:text-base text-gray-600 mt-1">ราคา: 100 บาท</p>
+          <button class="hidden md:block mt-3 bg-blue-500 hover:bg-blue-600 text-white py-1 px-4 rounded-full text-sm">
+            เพิ่มลงตะกร้า
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer สำหรับหน้าจอขนาดใหญ่ -->
+  <footer class="hidden md:block bg-white mt-8 py-6 border-t">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-2">เกี่ยวกับเรา</h3>
+          <p class="text-gray-600">ร้านอาหารของเราให้บริการอาหารไทยรสชาติดั้งเดิม สด สะอาด อร่อย ในราคาที่เหมาะสม</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-2">ติดต่อเรา</h3>
+          <p class="text-gray-600">โทร: 02-123-4567<br>อีเมล: info@myshop.com<br>ที่อยู่: 123 ถนนสุขุมวิท กรุงเทพฯ</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-2">เวลาทำการ</h3>
+          <p class="text-gray-600">จันทร์-ศุกร์: 10:00 - 22:00<br>เสาร์-อาทิตย์: 11:00 - 23:00</p>
+        </div>
+      </div>
+      <div class="border-t mt-8 pt-6 text-center text-gray-500">
+        © 2025 My Shop. สงวนลิขสิทธิ์.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Footer สำหรับมือถือ -->
+  <footer class="md:hidden bg-white mt-4 py-4 border-t text-center text-gray-500 text-sm">
+    © 2025 My Shop. สงวนลิขสิทธิ์.
+  </footer>
+</body>
+</html>
