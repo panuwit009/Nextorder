@@ -11,9 +11,7 @@ export default async function Realtimeorders() {
     table: 'orders',
   },
   (payload) => (
-  <pre>
-    {JSON.stringify(payload, null, 4)};
-    </pre>)
+  console.log(payload))
 )
 .subscribe()
 
