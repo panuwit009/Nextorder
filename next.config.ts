@@ -4,8 +4,8 @@ const nextConfig: NextConfig = {
   devIndicators: false,
   /* config options here */
   output: "export",
-  basePath: "/nextorder",
-  assetPrefix: "/nextorder/"
+  basePath: "/Nextorder",
+  assetPrefix: "/Nextorder/"
 };
 
 export default nextConfig;
